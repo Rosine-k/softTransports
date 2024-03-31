@@ -1,0 +1,14 @@
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    &__copyright {
+        font-size: 16px;
+        padding-top: 60px;
+        padding-bottom: 60px;
+        font-weight: 400;
+        display: flex;
+
+    }
+}

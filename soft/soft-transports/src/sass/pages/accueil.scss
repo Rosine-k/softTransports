@@ -1,0 +1,111 @@
+.home {
+    position: relative;
+    &__banner {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        opacity: 95%;
+        // filter: brightness(1);
+    
+    }
+    &__blocBanner {
+        position: relative;
+        display: block;
+        
+    }
+    &__textBanner {
+        margin-top: 30px;
+        z-index: 1;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        
+        justify-content: center;
+    }
+    &__imgBanner, &__banner {
+        display: block;
+        width: 100%; 
+        height: auto;
+    }
+    
+    &__banner-phone {
+    
+        
+        color: white;
+        
+        border: 2px solid #01A247;
+        padding-left: 10px;
+        padding-top: 10px;
+        padding-right: 10px;
+        padding-bottom: 10px;
+        font-weight: 600;
+        text-align: center;
+        font-size: 23px;
+        margin-left: 200px;
+    }
+    &__banner-phone:hover {
+        background-color: #FFCB12;
+        border: none;
+
+    }
+    &__banner-h1, &__banner-h2 {
+        color: white;
+        text-align: center;
+        
+        
+    }
+    &__banner-h1 {
+        font-size: 40px;
+
+        
+    }
+    &__banner-h2 {
+        font-size: 36px;
+
+    
+    }
+
+    &__banner-blocLink {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 70px;
+        gap: 50px;
+    }
+    &__banner-linkT, &__banner-linkE {
+        color: white;
+        font-size: 30px;
+        text-decoration: none;
+    }
+    &__banner-linkT {
+        background-color: #4C4C4C;
+        border-radius: 50px;
+        padding-left: 20px;
+        padding-top: 10px;
+        padding-right: 20px;
+        padding-bottom: 10px;
+    }
+    &__banner-linkT:hover {
+        background-color: #5b5a5a;
+        box-shadow:  4px 4px 6px 0 rgba(48, 46, 46, 0.5);
+        cursor: pointer;
+
+    }
+    &__banner-linkT:active {
+        transform: scale(1);
+    }
+    &__banner-linkE {
+        background-color: #01A247;
+        border-radius: 50px;
+        padding-left: 20px;
+        padding-top: 10px;
+        padding-right: 20px;
+        padding-bottom: 10px;
+        
+    }
+    &__banner-linkE:hover {
+        background-color: #0ab353;
+        cursor: pointer;
+        box-shadow:  4px 4px 6px 0 rgba(51, 50, 50, 0.5);
+    }
+}
