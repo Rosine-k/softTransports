@@ -30,7 +30,7 @@ function Header() {
           </div>
 
           <div className="navigation__blocb">
-            <Link to="/" className="navigation__link"> TARIFS </Link>
+            <Link to="/tarif" className="navigation__link"> TARIFS </Link>
 
             <Link to="/photos"  className= "navigation__link"> DÉMÉNAGEMENT </Link>
 
