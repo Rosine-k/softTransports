@@ -15,7 +15,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Accueil />} />
         <Route path="*" element={<Erreur />} />
-        <Route path="/conditions-generales-ventes" element={<Conditions />} />
+        <Route path="/conditions" element={<Conditions />} />
         <Route path="/mentions-legales" element={<Mentions />} />
        
       </Routes>

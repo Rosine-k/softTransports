@@ -1,0 +1,19 @@
+.mentions {
+    margin-left: 100px;
+    text-align: left;
+    margin-top: 70px;
+    margin-bottom: 100px;
+    &__h1 {
+        font-size: 30px;
+    }
+    &__bloc {
+        font-weight: 300;
+    }
+    &__h2 {
+        font-size: 23px;
+        font-weight: 300;
+    }
+    &__text {
+        font-size: 23px;
+    }
+}
