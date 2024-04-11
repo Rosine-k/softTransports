@@ -47,3 +47,31 @@ body {
     width: 100%;
     z-index: 1000;
 }
+
+
+/* Medias queries */
+
+/* Styles pour écran de petite taille (téléphones) */
+@media only screen and (max-width: 600px) {
+    .navigation__blocb {
+        display: none; /* Masquer les liens */
+    }
+    .navigation__logoImg {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/* Styles pour écran de taille moyenne (tablettes) */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    .navigation__blocb {
+        gap: 40px; /* Réduire l'espacement entre les liens */
+    }
+}
+
+/* Styles pour écran de grande taille (ordinateurs) */
+@media only screen and (min-width: 1025px) {
+    .navigation__link {
+        font-size: 20px; /* Augmenter la taille de la police */
+    }
+}

@@ -10,8 +10,6 @@ function Conditions () {
             <main>
                 <div className='conditions'>
 
-                    
-
                     <div className='conditions__bloc'>
 
                         <h1 className='conditions__h1'>Conditions générales de vente</h1>
@@ -217,9 +215,7 @@ function Conditions () {
                         sur la Protection des Données (RGPD). Une information écrite lui est remise à ce sujet.</p><br /><br />
 
 
-                    </div>
-
-                    
+                    </div>                    
 
                     <div className='conditions__bloc'>
 
@@ -247,12 +243,8 @@ function Conditions () {
                         <p className='conditions__text'>Vous disposez, s’agissant de vos données personnelles, d’un droit d’accès, de rectification, d’effacement, de limitation du traitement, de portabilité et d’opposition. Vous pouvez exercer vos droits (sous réserve de produire, pour des raisons de sécurité, un justificatif d’identité valide) ou recueillir toute information relative à vos données personnelles en adressant un courrier à l’entreprise à l’adresse indiquée à la rubrique « Responsable de traitement », ou un courriel à l’adresse suivante : <a href="mailto:soft.transports@gmail.com">soft.transports@gmail.com</a>.</p>
 
                         <p className='conditions__text'>En cas de difficulté concernant le traitement de vos données personnelles, vous disposez de la faculté de déposer une réclamation auprès de la Commission nationale Informatique et Libertés (CNIL - <a href="https://www.cnil.fr">www.cnil.fr</a>).</p>
-
-
-                        
+                       
                     </div>
-
-    
 
                 </div>
 

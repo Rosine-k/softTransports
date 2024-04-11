@@ -9,8 +9,10 @@ import Garde from '../../assets/gardemeuble.png';
 import Tel from '../../assets/telephone.png';
 import Localisation from '../../assets/localisateur.png';
 import Email from '../../assets/email.png';
+// import { nanoid } from 'nanoid';
 
 function Accueil () {
+    // const [csrfToken] = useState(nanoid());
 
     return (
         <div>
@@ -18,6 +20,7 @@ function Accueil () {
             <main>
                 <div className='home'>
 
+                    {/*BANNER*/} 
                     <div className='home__blocBanner'>
 
                         <div className='home__imgBanner'>
@@ -38,8 +41,10 @@ function Accueil () {
                         
                     </div>
 
+                    {/*INFORMATIONS*/} 
                     <div className='home__blocDescription'>
 
+                        {/*DEMENAGEMENT*/} 
                         <div  className='home__demenagement' id='demenagement'> 
 
                            <h3 className='home__h3' >Déménagement</h3>
@@ -60,6 +65,7 @@ function Accueil () {
 
                         </div>
 
+                        {/*MONTE CHARGE*/} 
                         <div className='home__monte' id='monte'>
 
                             <h3 className='home__h3' >Location de monte-meuble</h3>
@@ -74,12 +80,11 @@ function Accueil () {
                                     <br />Nous comprenons les défis que peut représenter le déplacement d'articles volumineux ou délicats à travers des espaces restreints ou des points d'accès difficiles. C'est pourquoi notre service de location de monte-meuble avec un technicien qualifié est conçu pour vous fournir l'assistance nécessaire afin de rendre  votre déménagement aussi fluide et efficace que possible.
 
                                 </p>
-                            </div>
-
-                            
+                            </div>                            
                             
                         </div>
 
+                        {/*GARDE MEUBLE*/} 
                         <div className='home__garde'>
 
                             <h3 className='home__h3' id='garde'>Location de garde-meuble</h3>
@@ -100,6 +105,7 @@ function Accueil () {
 
                     </div>
 
+                    {/*TARIF*/} 
                     <div className='home__tarif'>
 
                         <h3 className='home__h3' id='tarif'>Nos formules de déménagement</h3>
@@ -120,10 +126,7 @@ function Accueil () {
 
                         <div className='home__tarif-troisbloc'>
 
-                            <div className='home__tarif-bloc'>
-
-                                 
-                                
+                            <div className='home__tarif-bloc'>                                
 
                                 <div className='home__tarif-listes'>
                                     <ul className='home__tarif-blocListe'> 
@@ -194,10 +197,9 @@ function Accueil () {
                             </div>
 
                         </div>
-                    </div>
+                    </div>  
 
-                        
-
+                    {/*ESTIMATION*/} 
                     <div className='home__estimation' id='estimation'>
                         <h3 className='home__h3'>Estimation</h3>
 
@@ -205,6 +207,8 @@ function Accueil () {
                             <h4 className='home__estimation-h4'>REMPLISSEZ CE FORMULAIRE ET VOUS RECEVREZ UN DEVIS SOUS 24H</h4>
 
                             <form action="/submit_form" method="post">
+                                {/* jeton CSRF */}
+                                {/* <input type="hidden" name="_csrf" value={csrfToken} />   */}
                                 <fieldset>
                                     <legend className='home__form-titre'>Informations de contact</legend>
                                     
@@ -333,6 +337,13 @@ function Accueil () {
 
                     </div>
 
+                    /{/*AVIS GOOGLE*/} 
+                    <div className='home__google'>
+                        <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+                        <div class="elfsight-app-eff75857-ba3c-4468-8ad3-a0eda61d6465" data-elfsight-app-lazy></div>
+                    </div>
+
+                    {/*CONTACT*/} 
                     <div className='home__contact' id='contact'>
 
                         <h5 className='home__h3'>Contact</h5>
@@ -358,14 +369,6 @@ function Accueil () {
                         </div>
 
                     </div>
-
-
-
-                    
-
-
-                   
-
 
                 </div>
 
