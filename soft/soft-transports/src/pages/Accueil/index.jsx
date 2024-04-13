@@ -205,32 +205,41 @@ function Accueil () {
 
                         <div className='home__estimation-formulaire'>
                             <h4 className='home__estimation-h4'>REMPLISSEZ CE FORMULAIRE ET VOUS RECEVREZ UN DEVIS SOUS 24H</h4>
+                            {/*FORMULAIRE*/}
+                            <form id="form" onsubmit="sendForm(); return false;">
 
-                            <form action="/submit_form" method="post">
                                 {/* jeton CSRF */}
                                 {/* <input type="hidden" name="_csrf" value={csrfToken} />   */}
                                 <fieldset>
                                     <legend className='home__form-titre'>Informations de contact</legend>
                                     
                                     <div className='home__form-blocUn'>
+                                        {/*NOM*/}
                                         <div>
                                             <label for="nom"></label>
                                             <input className='home__form-input' type="text" id="nom" name="nom" placeholder='Nom* 'required></input>
+                                            <p id="nomError" class="home__error"></p>
                                         </div>
+                                        {/*PRENOM*/}
                                         <div>
                                             <label for="prenom"></label>
                                             <input className='home__form-input' type="text" id="prenom" name="prenom" placeholder='Prénom*' required></input>
+                                            <p id="prenomError" class="home__error"></p>
                                         </div>
                                     </div>
 
                                     <div className='home__form-blocUn'>
+                                        {/*TELEPHONE*/}
                                         <div>
                                             <label for="telephone"></label>
                                             <input className='home__form-input' type="tel" id="telephone" name="telephone" placeholder='Téléphone*' required></input>
+                                            <p id="telephoneError" class="home__error"></p>
                                         </div>
+                                        {/*EMAIL*/}
                                         <div>
                                             <label for="email"></label>
                                             <input className='home__form-input' type="email" id="email" name="email" placeholder='Email*' required></input>
+                                            <p id="emailError" class="home__error"></p>
                                         </div>
                                     </div>
 
@@ -239,37 +248,45 @@ function Accueil () {
 
                                 <fieldset>
                                     <legend className='home__form-titre'>Votre déménagement</legend>
-
-                                    
+                                    {/*DATE*/}                                    
                                     <div>
                                         <label for="date_dem"></label>
                                         <input className='home__form-inputUn' type="date" id="date_dem" name="date_dem" placeholder='Date de déménagement*' required></input>
+                                        <p id="dateError" class="home__error"></p>
                                     </div>
 
                                     <div className='home__form-blocUn'>
+                                        {/*VILLE DEPART*/}
                                         <div>
                                             <label for="ville_dep"></label>
                                             <input className='home__form-input' type="text" id="ville_dep" name="ville_dep" placeholder='Ville de départ*' required></input>
+                                            <p id="villeDepError" class="home__error"></p>
                                         </div>
+                                        {/*VILLE ARRIVEE*/}
                                         <div>
                                             <label for="ville_arr"></label>
                                             <input className='home__form-input' type="text" id="ville_arr" name="ville_arr" placeholder="Ville d'arrivée*" required></input>
+                                            <p id="villeArrError" class="home__error"></p>
                                         </div>
 
                                     </div>
 
                                     <div className='home__form-blocUn'>
+                                        {/*ADRESSE*/}
                                         <div>
                                             <label for="adresse"></label>
                                             <input className='home__form-input' type="text" id="adresse" name="adresse" placeholder='Adresse*' required></input>
+                                            <p id="adresseError" class="home__error"></p>
                                         </div>
+                                        {/*VOLUME*/}
                                         <div>
                                             <label for="volume"></label>
                                             <input className='home__form-input' type="number" id="volume" name="volume"  placeholder='Volume en m²*' required></input>
+                                            <p id="volumeError" class="home__error"></p>
                                         </div>
-                                        </div>
+                                    </div>
                                     
-                                    
+                                    {/*REMARQUES*/}
                                     <div>
                                         <label for="remarques"></label>
                                         <textarea className='home__textarea' id="remarques" name="remarques" placeholder='Remarques' rows="4"></textarea>
@@ -277,6 +294,7 @@ function Accueil () {
 
                                 </fieldset>
 
+                                {/*FORMULES*/}
                                 <fieldset className='home__formules'>
                                     <legend className='home__formulesOption'>Formule souhaitée :</legend>
 
@@ -309,6 +327,7 @@ function Accueil () {
                                     
                                 </fieldset>
 
+                                {/*OPTIONS*/}
                                 <fieldset className='home__formules'>
                                     <legend className='home__formulesOption'>Options :</legend>
 
@@ -329,6 +348,7 @@ function Accueil () {
                                     
                                 </fieldset>
 
+                                {/*BOUTON*/}
                                 <div>
                                     <button className='home__buttonForm' type="submit">OBTENIR UN DEVIS</button>
                                 </div>

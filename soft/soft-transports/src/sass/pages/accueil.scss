@@ -218,6 +218,9 @@
         gap: 15px;
         padding-bottom: 8px;
     }
+    &__error {
+        color: red;
+    }
     &__form-input {
         width: 400px;
         font-size: 16px;
@@ -332,40 +335,6 @@ fieldset {
     gap: 50px;
 }
 
-/* Stylisation des champs de formulaire en rouge en cas d'erreur */
-.home__form-input:invalid {
-    border: 2px solid red; /* Bordure rouge */
-}
-
-/* Pour les navigateurs qui supportent les pseudo-classes CSS personnalisées (:optional, :required, etc.) */
-.home__form-input:required:invalid {
-    border: 2px solid red; /* Bordure rouge */
-}
-
-/* Pour les navigateurs qui ne supportent pas les pseudo-classes CSS personnalisées */
-.home__form-input.required:invalid {
-    border: 2px solid red; /* Bordure rouge */
-}
-
-/* Stylisation des zones de texte en rouge en cas d'erreur */
-.home__textarea:invalid {
-    border: 2px solid red; /* Bordure rouge */
-}
-
-/* Pour les navigateurs qui supportent les pseudo-classes CSS personnalisées (:optional, :required, etc.) */
-.home__textarea:required:invalid {
-    border: 2px solid red; /* Bordure rouge */
-}
-
-/* Pour les navigateurs qui ne supportent pas les pseudo-classes CSS personnalisées */
-.home__textarea.required:invalid {
-    border: 2px solid red; /* Bordure rouge */
-}
-
-/* Stylisation des cases à cocher en rouge en cas d'erreur */
-.home__formules input[type="checkbox"]:invalid {
-    outline: 2px solid red; /* Contour rouge */
-}
 
 
 /* Media queries */
