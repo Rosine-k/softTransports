@@ -1,7 +1,6 @@
 import React from 'react';
 import Header from "../../layouts/Header/index";
 import Footer from '../../layouts/Footer';
-// import { Link } from "react-router-dom";
 import Banner from '../../assets/bann.png';
 import Demenagement from '../../assets/demenagement.png';
 import Monte from '../../assets/montemeuble.png';
@@ -9,10 +8,8 @@ import Garde from '../../assets/gardemeuble.png';
 import Tel from '../../assets/telephone.png';
 import Localisation from '../../assets/localisateur.png';
 import Email from '../../assets/email.png';
-// import { nanoid } from 'nanoid';
 
 function Accueil () {
-    // const [csrfToken] = useState(nanoid());
 
     return (
         <div>
@@ -357,7 +354,7 @@ function Accueil () {
 
                     </div>
 
-                    /{/*AVIS GOOGLE*/} 
+                    {/*AVIS GOOGLE*/} 
                     <div className='home__google'>
                         <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
                         <div class="elfsight-app-eff75857-ba3c-4468-8ad3-a0eda61d6465" data-elfsight-app-lazy></div>

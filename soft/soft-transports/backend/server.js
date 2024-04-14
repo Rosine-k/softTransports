@@ -1,23 +1,25 @@
 const express = require('express');
+import cors from "cors";
 const bodyParser = require('body-parser');
 
 const app = express();
+app.use(cors());
+
 const PORT = process.env.PORT || 5000;
 
 // Middleware pour parser les requêtes JSON
 app.use(bodyParser.json());
 
-// Route pour gérer la soumission du formulaire
-app.post('/submit_form', (req, res) => {
-    const { nom_prenom, email, message } = req.body;
+// Middleware pour les logs
+app.use((req, res, next) => {
+    console.log(`${new Date().toISOString()} - ${req.method} ${req.url}`);
+    next();
+});
 
-    // Validation côté serveur
-    if (!nom_prenom || !email || !message) {
-        return res.status(400).json({ error: 'Tous les champs sont obligatoires.' });
-    }
-
-    // Envoi d'une réponse si tout est OK
-    res.json({ success: true, message: 'Formulaire soumis avec succès.' });
+// Middleware pour gérer les erreurs
+app.use((err, req, res, next) => {
+    console.error('Une erreur est survenue :', err);
+    res.status(500).json({ error: 'Une erreur est survenue. Veuillez réessayer plus tard.' });
 });
 
 // Démarrage du serveur

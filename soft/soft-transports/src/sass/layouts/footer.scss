@@ -19,3 +19,22 @@
         margin-right: 7px;
     }
 }
+
+@media only screen and (max-width: 480px) {
+    .footer {
+        display: block;
+        // gap: 5px;
+        &__link {
+            display: block;
+            margin-top: 7px;
+            
+        }
+        &__copyright {
+            font-size: 10px;
+            display: block;
+            
+            
+        }
+    }
+   
+}

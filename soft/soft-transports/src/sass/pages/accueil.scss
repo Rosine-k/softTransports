@@ -113,11 +113,9 @@
 
     /*informations*/
     &__demenagement, &__monte, &__garde {
-        // display: block;
-        // justify-content: center;
         display: flex;
         flex-direction: column;
-        align-items: center; /* Pour centrer les éléments horizontalement */
+        align-items: center; 
         margin-bottom: 80px;        
         width: 100%;
         padding-top: 40px;
@@ -137,6 +135,7 @@
         width: 600px;
         height: 300px;
         object-fit: cover;
+       
     }
 
     /*tarif*/
@@ -326,7 +325,7 @@
 fieldset {
     border: none;
 }
-.home__demenagement-bloc, .home__montebloc-img, .home__gardebloc-img {
+.home__demenagement-bloc, .home__montebloc-img, .home__gardebloc-img, .home__demenagement-img {
     display: flex;
     flex-direction: row;
     align-items: center; 
@@ -346,56 +345,126 @@ fieldset {
 }
 
 @media only screen and (max-width: 480px) {
-    /* Ajoutez ici vos règles CSS pour les écrans de taille téléphone */
-    .home__banner {
-        width: 100%;
+    
+    .home__textBanner {
+        margin-top: 5px;
+    }
+    .home__banner-phone {
+        font-size: 11px;
+        margin-left: 0;
     }
     .home__banner-h1 {
-      font-size: 30px;
+      font-size: 18px;
+      font-weight: 400;
     }
     .home__banner-h2 {
-      font-size: 26px;
+      font-size: 14px;
+      font-weight: 200;
+    }
+    .home__banner-blocLink {
+        margin-top: 0;
     }
     .home__banner-linkT, .home__banner-linkE {
-      font-size: 22px;
+      font-size: 14px;
+      padding: 5px;
+    }
+    .home__banner-linkT {
+        width: 35px;
+    }
+    .home__banner-linkE {
+        width: 117px;
+    }
+    .home__blocDescription {
+        margin-top: 40px;
     }
     .home__description {
-      font-size: 18px;
-      width: 90%;
+      font-size: 12px;
+      width: 300px;
+      margin: 0 auto;
+      text-align: center;
+      justify-content: center;
+      margin-bottom: 10px;
+      margin-top: 10px;
+    }
+    .home__h3 {
+        font-size: 18px;
+        // margin-bottom: -25px;
+       
+    }
+    .home__demenagement, .home__monte, .home__garde {
+        margin-bottom: 20px;
+    }
+    .home__demenagement-bloc {
+        margin-top: 30px;
+        display: block;
+        width: 90%;
+        
+    }
+    .home__demenagement-img, .home__monte-img, .home__garde-img {
+        margin-top: 0;
+        width: 250px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .home__tarif-text, .home__tarif-li1 {
+        font-size: 12px;
     }
     .home__tarif-list1 {
       margin-left: 0;
+      font-size: 12px;
+    }
+    .home__tarif-troisbloc {
+        display: block;
     }
     .home__tarif-li, .home__tarif-prix {
-      font-size: 18px;
+      font-size: 12px;
     }
     .home__tarif-titre {
-      font-size: 24px;
+      font-size: 15px;
+    }
+    .home__tarif-bloc {
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
     }
     .home__estimation-h4 {
-      font-size: 20px;
+      font-size: 12px;
     }
     .home__form-titre {
-      font-size: 16px;
+      font-size: 13px;
       margin-left: 0;
     }
     .home__form-input, .home__textarea {
       width: 90%;
-      font-size: 16px;
+      font-size: 13px;
     }
     .home__form-inputUn {
       width: 90%;
-      font-size: 16px;
+      font-size: 13px;
+    }
+    .home__choix {
+        gap: 10px;
+        
     }
     .home__choixDif {
-      font-size: 18px;
+      font-size: 10px;
+      align-items: center;
     }
     .home__buttonForm {
-      font-size: 20px;
+      font-size: 13px;
       padding-top: 15px;
       padding-bottom: 15px;
     }
+    .home__formulesOption {
+        font-size: 14px;
+        text-align: left;
+        margin-right: 10px;
+    }
     .home__contact-text {
-      font-size: 20px;
+      font-size: 14px;
+    }
+    .home__contact-imgTel, .home__contact-imgEmail, .home__contact-imgAdresse {
+        width: 20px;
+        height: 20px;
     }
 }
