@@ -1,15 +1,37 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import Header from "../../layouts/Header/index";
 import Footer from '../../layouts/Footer';
-import Banner from '../../assets/bann.png';
+import Banner from '../../assets/banniere.png';
 import Demenagement from '../../assets/demenagement.png';
 import Monte from '../../assets/montemeuble.png';
 import Garde from '../../assets/gardemeuble.png';
 import Tel from '../../assets/telephone.png';
 import Localisation from '../../assets/localisateur.png';
 import Email from '../../assets/email.png';
+// import emailjs from '@emailjs/browser';
+
+
 
 function Accueil () {
+
+//     const form = useRef();
+
+//   const sendEmail = (e) => {
+//     e.preventDefault();
+
+//     emailjs
+//       .sendForm('service_3l6pg5i', 'template_nejy1zj', form.current, {
+//         publicKey: 'QOQVR5eY_l723sW1L',
+//       })
+//       .then(
+//         () => {
+//           console.log('SUCCESS!');
+//         },
+//         (error) => {
+//           console.log('FAILED...', error.text);
+//         },
+//       );
+//   };
 
     return (
         <div>
@@ -21,7 +43,7 @@ function Accueil () {
                     <div className='home__blocBanner'>
 
                         <div className='home__imgBanner'>
-                            <img className="home__banner" src={Banner} alt="banner" />
+                            <img className="home__banner" src={Banner} alt="banniere" />
                         </div>
                         
                         <div className='home__textBanner'>
@@ -36,6 +58,12 @@ function Accueil () {
                             </div>
                         </div>
                         
+                    </div>
+
+                    {/*AVIS GOOGLE*/} 
+                    <div className='home__google'>
+                        <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+                        <div class="elfsight-app-eff75857-ba3c-4468-8ad3-a0eda61d6465" data-elfsight-app-lazy></div>
                     </div>
 
                     {/*INFORMATIONS*/} 
@@ -203,10 +231,8 @@ function Accueil () {
                         <div className='home__estimation-formulaire'>
                             <h4 className='home__estimation-h4'>REMPLISSEZ CE FORMULAIRE ET VOUS RECEVREZ UN DEVIS SOUS 24H</h4>
                             {/*FORMULAIRE*/}
-                            <form id="form" onsubmit="sendForm(); return false;">
+                            <form id="form" >
 
-                                {/* jeton CSRF */}
-                                {/* <input type="hidden" name="_csrf" value={csrfToken} />   */}
                                 <fieldset>
                                     <legend className='home__form-titre'>Informations de contact</legend>
                                     
@@ -298,25 +324,25 @@ function Accueil () {
                                     <div className='home__choix'>
                                         <div>
                                             <label className='home__choixDif'>
-                                                <input  type="checkbox" name="formule" value="economique"></input>
+                                                <input  type="checkbox" name="formule_econommique" id='formule_econommique' value="economique"></input>
                                                 Économique
                                             </label>
                                         </div>
                                         <div>
                                             <label className='home__choixDif'>
-                                                <input  type="checkbox" name="formule" value="economique+"></input>
+                                                <input  type="checkbox" name="formule_econommique_plus" id='formule_econommique_plus' value="economique+"></input>
                                                 Économique +
                                             </label>
                                         </div>
                                         <div>
                                             <label className='home__choixDif'>
-                                                <input  type="checkbox" name="formule" value="standard"></input>
+                                                <input  type="checkbox" name="formule_standard" id='formule_standard' value="standard"></input>
                                                 Standard
                                             </label>
                                         </div>
                                         <div>
                                             <label className='home__choixDif'>
-                                                <input  type="checkbox" name="formule" value="luxe"></input>
+                                                <input  type="checkbox" name="formule_luxe" id='formule_luxe' value="luxe"></input>
                                                 Luxe
                                             </label>
                                         </div>
@@ -331,13 +357,13 @@ function Accueil () {
                                     <div className='home__choix'>
                                         <div>
                                             <label className='home__choixDif'>
-                                                <input  type="checkbox" name="options" value="monte_meuble"></input>
+                                                <input  type="checkbox" name="option_monte_meuble" id="option_monte_meuble" value="monte_meuble"></input>
                                                 Monte-meuble
                                             </label>
                                         </div>
                                         <div>
                                             <label className='home__choixDif'>
-                                                <input  type="checkbox" name="options" value="garde_meuble"></input>
+                                                <input  type="checkbox" name="option_garde_meuble" id="option_garde_meuble" value="garde_meuble"></input>
                                                 Garde-meuble
                                             </label>
                                         </div>
@@ -347,18 +373,16 @@ function Accueil () {
 
                                 {/*BOUTON*/}
                                 <div>
-                                    <button className='home__buttonForm' type="submit">OBTENIR UN DEVIS</button>
+                                    <button type='submit' className='home__buttonForm'>OBTENIR UN DEVIS</button>
                                 </div>
                             </form>
+                            
+                            
                         </div>
 
                     </div>
 
-                    {/*AVIS GOOGLE*/} 
-                    <div className='home__google'>
-                        <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
-                        <div class="elfsight-app-eff75857-ba3c-4468-8ad3-a0eda61d6465" data-elfsight-app-lazy></div>
-                    </div>
+                    
 
                     {/*CONTACT*/} 
                     <div className='home__contact' id='contact'>

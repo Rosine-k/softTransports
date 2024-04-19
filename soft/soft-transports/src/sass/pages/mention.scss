@@ -25,16 +25,17 @@
     .mentions {
         margin-left: 20px;
         margin-right: 20px;
+        &__h1 {
+            font-size: 26px;
+        }
+        &__h2 {
+           font-size: 20px; 
+        }
+        &__text {
+            font-size: 18px;
+        }
     }
-    .mentions__h1 {
-        font-size: 26px;
-    }
-    .mentions__h2 {
-        font-size: 20px;
-    }
-    .mentions__text {
-        font-size: 18px;
-    }
+    
 }
 
 /* Taille d'écran entre 768px et 1024px (tablettes) */
@@ -43,4 +44,17 @@
         margin-left: 50px;
         margin-right: 50px;
     }
+}
+
+@media only screen and (max-width: 480px) {
+    .mentions__h1 {
+        font-size: 18px;
+    }
+    .mentions__h2 {
+        font-size: 14px;
+    }
+    .mentions__text {
+        font-size: 13px;
+    }
+
 }

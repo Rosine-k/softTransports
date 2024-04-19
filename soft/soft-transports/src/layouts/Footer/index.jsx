@@ -9,10 +9,13 @@ function Footer() {
    
             <div className="footer__bloc" >
                 
-                <div className="footer__copyright"> © 2024 SOFT TRANSPORTS | 
-                  <Link to="/mentions-legales" className='footer__link'>Mentions légales |</Link>   
-                  <Link to="/conditions-generales-vente" className='footer__link'>Conditions générales de vente et politique de condifentialité</Link>
-                </div>
+                <div className="footer__copyright"> © 2024 SOFT TRANSPORTS</div> 
+                <div className='footer__liens'>
+                    <Link to="/mentions-legales" className='footer__link'>Mentions légales </Link>   
+                    <Link to="/conditions-et-politique" className='footer__link'>Conditions générales de vente et politique de condifentialité</Link>
+                </div> 
+                
+                
 
             </div>
 

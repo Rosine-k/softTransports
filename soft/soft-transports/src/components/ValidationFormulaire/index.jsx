@@ -77,7 +77,7 @@ function validEmail() {
         emailErrorMsg.innerHTML = 'Champ invalide, veuillez saisir votre adresse email.';
         isvalid = false;
     }
-    else if (emailRegExp.test(email.value)) {
+    else if (emailRegExp.test(inputEmail.value)) {
         emailErrorMsg.innerHTML = '';
     } else {
         emailErrorMsg.innerHTML = 'Champ invalide, veuillez vérifier votre adresse email.';
@@ -97,7 +97,7 @@ function validDate() {
         dateErrorMsg.innerHTML = 'Champ invalide, veuillez saisir votre date.';
         isvalid = false;
     }
-    else if (dateRegExp.test(date.value)) {
+    else if (dateRegExp.test(inputDate.value)) {
         dateErrorMsg.innerHTML = '';
     } else {
         dateErrorMsg.innerHTML = 'Champ invalide, veuillez vérifier votre date.';
@@ -187,7 +187,9 @@ function validVolume() {
 }
 
 // envoie du formulaire
-function sendForm() {
+function sendFormulaire(event) {
+    event.preventDefault(); // Empêcher le comportement par défaut du formulaire
+
     // Validation des champs du formulaire
     if (!validLastName() || !validFirstName() || !validTelephone() || !validEmail() || !validDate() || !validVilleDep() || !validVilleArr() || !validAdresse() || !validVolume()) {
         alert("Vérifiez les champs !");
@@ -195,58 +197,93 @@ function sendForm() {
     }
 
     // Récupération des données du formulaire
-    var formData = new FormData();
-    formData.append('nom', document.getElementById('nom').value);
-    formData.append('prenom', document.getElementById('prenom').value);
-    formData.append('telephone', document.getElementById('telephone').value);
-    formData.append('email', document.getElementById('email').value);
-    formData.append('date_dem', document.getElementById('date_dem').value);
-    formData.append('ville_dep', document.getElementById('ville_dep').value);
-    formData.append('ville_arr', document.getElementById('ville_arr').value);
-    formData.append('adresse', document.getElementById('adresse').value);
-    formData.append('volume', document.getElementById('volume').value);
-    formData.append('remarques', document.getElementById('remarques').value);
-    formData.append('formule', document.querySelector('input[name="formule"]:checked').value);
+    var params = {
+        nom : document.getElementById('nom').value,
+        prenom : document.getElementById('prenom').value,
+        telephone : document.getElementById('telephone').value,
+        email : document.getElementById('email').value,
+        date_dem : document.getElementById('date_dem').value,
+        ville_dep : document.getElementById('ville_dep').value,
+        ville_arr : document.getElementById('ville_arr').value,
+        adresse : document.getElementById('adresse').value,
+        volume : document.getElementById('volume').value,
+        remarques : document.getElementById('remarques').value,
+        formule : document.querySelector('input[name="formule"]:checked').value,
+    };
+
     var options = document.querySelectorAll('input[name="options"]:checked');
     options.forEach(function(option) {
-        formData.append('options[]', option.value);
+        params['options[]'] = option.value;
     });
 
-    // Envoi des données du formulaire au script PHP
-    var xhr = new XMLHttpRequest();
-    xhr.open('POST', 'send_form.php', true);
-    xhr.onload = function() {
-        if (xhr.status === 200) {
-            alert(xhr.responseText);
-            // Réinitialisation du formulaire après l'envoi
-            document.getElementById('form').reset();
-        } else {
-            alert('Une erreur s\'est produite lors de l\'envoi de votre demande.');
-        }
-    };
-    xhr.send(formData);
+    // Envoi des données via emailjs
+    emailjs.sendForm("service_3l6pg5i", "template_nejy1zj", params).then(function(res) {
+        alert("Message envoyé" + res.status);
+    }).catch(function(error) {
+        console.error("Erreur lors de l'envoi du message:", error);
+    });
 }
 
 
-// function sendForm() {
 
-//     let inputFirstName = document.getElementById('prenom');
-//     let inputLastName = document.getElementById('nom');
-//     let inputTelephone = document.getElementById('telephone');
-//     let inputEmail = document.getElementById('email');
-//     let inputDate = document.getElementById('date');
-//     let inputVilleDep = document.getElementById('ville_dep');
-//     let inputVilleArr = document.getElementById('ville_arr');
-//     let inputAdresse = document.getElementById('adresse');
-//     let inputVolume = document.getElementById('volume');
+// // Ajout d'un gestionnaire d'événements pour le formulaire
+// document.getElementById("form").addEventListener("submit", sendForm);
 
-//     // si tous les champs ne sont pas valides
-//     if (!validLastName() || !validFirstName() || !validTelephone() || !validEmail() || !validDate() || !validVilleDep() || !validVilleArr() || !validAdresse() || !validVolume()) {
-//         alert("Vérifiez les champs !");
-//     }
 
-//     // si tous les champs sont valides, envoie du formulaire
-//     else {
+//   // var formData = new FormData(); 
+//     // formData.append('nom', document.getElementById('nom').value);
+//     // formData.append('prenom', document.getElementById('prenom').value);
+//     // formData.append('telephone', document.getElementById('telephone').value);
+//     // formData.append('email', document.getElementById('email').value);
+//     // formData.append('date_dem', document.getElementById('date_dem').value);
+//     // formData.append('ville_dep', document.getElementById('ville_dep').value);
+//     // formData.append('ville_arr', document.getElementById('ville_arr').value);
+//     // formData.append('adresse', document.getElementById('adresse').value);
+//     // formData.append('volume', document.getElementById('volume').value);
+//     // formData.append('remarques', document.getElementById('remarques').value);
+//     // formData.append('formule', document.querySelector('input[name="formule"]:checked').value);
+//     // var options = document.querySelectorAll('input[name="options"]:checked');
+//     // options.forEach(function(option) {
+//     //     formData.append('options[]', option.value);
+//     // });
 
-//     }
-// }
+
+
+    
+
+//     // // Envoi des données du formulaire au script PHP
+//     // var xhr = new XMLHttpRequest();
+//     // xhr.open('POST', 'formulaire.php', true);
+//     // xhr.onload = function() {
+//     //     if (xhr.status === 200) {
+//     //         alert(xhr.responseText);
+//     //         // Réinitialisation du formulaire après l'envoi
+//     //         document.getElementById('form').reset();
+//     //     } else {
+//     //         alert('Une erreur s\'est produite lors de l\'envoi de votre demande.');
+//     //     }
+//     // };
+//     // xhr.send(formData);
+
+// // function sendForm() {
+
+// //     let inputFirstName = document.getElementById('prenom');
+// //     let inputLastName = document.getElementById('nom');
+// //     let inputTelephone = document.getElementById('telephone');
+// //     let inputEmail = document.getElementById('email');
+// //     let inputDate = document.getElementById('date');
+// //     let inputVilleDep = document.getElementById('ville_dep');
+// //     let inputVilleArr = document.getElementById('ville_arr');
+// //     let inputAdresse = document.getElementById('adresse');
+// //     let inputVolume = document.getElementById('volume');
+
+// //     // si tous les champs ne sont pas valides
+// //     if (!validLastName() || !validFirstName() || !validTelephone() || !validEmail() || !validDate() || !validVilleDep() || !validVilleArr() || !validAdresse() || !validVolume()) {
+// //         alert("Vérifiez les champs !");
+// //     }
+
+// //     // si tous les champs sont valides, envoie du formulaire
+// //     else {
+
+// //     }
+// // }
