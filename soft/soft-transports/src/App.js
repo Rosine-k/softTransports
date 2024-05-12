@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Accueil from "./pages/Accueil/index";
+import Erreur from "./pages/Erreur/index";
+import Conditions from "./pages/Conditions/index";
+import Mentions from "./pages/Mentions/index";
+import ScrollToTop from "./components/ScrollToTop/index";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <ScrollToTop/>  
+       
+      <Routes>
+        <Route path="/" element={<Accueil />} />
+        <Route path="*" element={<Erreur />} />
+        <Route path="/conditions-et-politique" element={<Conditions />} />
+        <Route path="/mentions-legales" element={<Mentions />} />
+       
+      </Routes>
+    </BrowserRouter>
   );
 }
 
