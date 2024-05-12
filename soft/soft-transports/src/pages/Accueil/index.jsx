@@ -63,10 +63,9 @@ function Accueil () {
 
                     {/*AVIS GOOGLE*/} 
                     <div className='home__google'>
-                        <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
-                        <div class="elfsight-app-eff75857-ba3c-4468-8ad3-a0eda61d6465" data-elfsight-app-lazy></div>
+                        <ElfsightWidget widgetID="eff75857-ba3c-4468-8ad3-a0eda61d6465" />
                     </div>
-                    <ElfsightWidget widgetID="eff75857-ba3c-4468-8ad3-a0eda61d6465" />
+                    
 
                     {/*INFORMATIONS*/} 
                     <div className='home__blocDescription'>
