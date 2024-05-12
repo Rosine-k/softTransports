@@ -1,0 +1,594 @@
+.home {
+    position: relative;
+    /*banner*/
+    &__banner {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        // opacity: 95%;    
+    }
+    &__blocBanner {
+        position: relative;
+        display: block;        
+    }
+    &__textBanner {
+        margin-top: 30px;
+        z-index: 1;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);        
+        justify-content: center;
+    }
+    &__imgBanner, &__banner {
+        display: block;
+        width: 100%; 
+        height: auto;
+    }    
+    &__banner-phone {            
+        color: white;        
+        border: 2px solid #01A247;
+        padding-left: 10px;
+        padding-top: 10px;
+        padding-right: 10px;
+        padding-bottom: 10px;
+        font-weight: 600;
+        text-align: center;
+        font-size: 23px;
+        margin-left: 200px;
+    }
+    &__banner-phone:hover {
+        background-color: #FFCB12;
+        border: none;
+    }
+    &__banner-h1, &__banner-h2 {
+        color: white;
+        text-align: center;                
+    }
+    &__banner-h1 {
+        font-size: 40px;        
+    }
+    &__banner-h2 {
+        font-size: 33px;    
+    }
+    &__banner-blocLink {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 70px;
+        gap: 50px;
+    }
+    &__banner-linkT, &__banner-linkE {
+        color: white;
+        font-size: 30px;
+        text-decoration: none;
+    }
+    &__banner-linkT {
+        background-color: #4C4C4C;
+        border-radius: 50px;
+        padding-left: 20px;
+        padding-top: 10px;
+        padding-right: 20px;
+        padding-bottom: 10px;
+    }
+    &__banner-linkT:hover {
+        background-color: #5b5a5a;
+        box-shadow:  4px 4px 6px 0 rgba(48, 46, 46, 0.5);
+        cursor: pointer;
+    }
+    &__banner-linkT:active {
+        transform: scale(1);
+    }
+    &__banner-linkE {
+        background-color: #01A247;
+        border-radius: 50px;
+        padding-left: 20px;
+        padding-top: 10px;
+        padding-right: 20px;
+        padding-bottom: 10px;        
+    }
+    &__banner-linkE:hover {
+        background-color: #0ab353;
+        cursor: pointer;
+        box-shadow:  4px 4px 6px 0 rgba(51, 50, 50, 0.5);
+    }
+    &__blocDescription {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 130px;
+        margin-bottom: 50px;
+        background-color: #f7f7f7;
+    }
+
+    /*informations*/
+    &__demenagement, &__monte, &__garde {
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        margin-bottom: 80px;        
+        width: 100%;
+        padding-top: 40px;
+        padding-bottom: 20px;
+    }
+    &__h3 {
+        font-size: 35px;
+        margin-top: 0;
+        margin-bottom: 0;
+
+    }
+    &__description {
+        font-size: 21px;
+        width: 600px;
+    }
+    &__demenagement-img, &__monte-img, &__garde-img {
+        width: 600px;
+        height: 300px;
+        object-fit: cover;       
+    }
+
+    /*tarif*/
+    &__tarif {
+        width: 80%; 
+        margin: 0 auto; 
+        text-align: center;
+    }
+    &__tarif-titre {
+        font-size: 29px;
+        color: white;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    &__tarif-text {
+        font-size: 21px;
+    }
+    &__tarif-bloc {
+        width: 20%;
+    }
+    &__tarif-troisbloc {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 28px;
+    }
+    &__tarif-blocListe {
+        list-style: none; 
+        padding: 0;
+        box-shadow:  4px 4px 6px 0 rgba(51, 50, 50, 0.5);
+    }
+    &__tarif-list1 {
+        text-align: left;
+        margin-left: 250px;              
+    }
+    &__tarif-li, &__tarif-prix {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
+        border: 1px solid #c7bdbd;
+    }
+    &__tarif-li1 {
+        list-style: none;
+        font-size: 21px;
+    }
+    &__tarif-prix {
+        font-weight: 700;
+    }
+
+    /*estimation*/
+    &__estimation {
+        width: 60%; 
+        margin: 0 auto;
+        text-align: center;
+        margin-top: 80px;
+        margin-bottom: 100px;
+    }
+    &__estimation-formulaire {
+        background-color: #4C4C4C;
+    }
+    &__estimation-h4 {
+        color: white;
+        font-size: 22px;
+        padding-top: 20px;
+    }
+    &__form-titre {
+        color: white;
+        font-size: 18px;
+        text-align: left;
+        margin-left: 78px;
+        font-style: italic;
+    }
+    &__form-blocUn {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        padding-bottom: 8px;
+    }
+    &__error {
+        color: red;
+    }
+    &__form-input {
+        width: 400px;
+        font-size: 16px;
+        padding-left: 6px;
+    }
+    &__form-inputUn {
+        width: 825px;
+        margin-bottom: 8px;
+        font-size: 16px;
+        color: gray;
+        padding-left: 6px;
+    }
+    &__textarea {
+        width: 825px;
+        font-size: 16px;
+        font-weight: 500;
+        padding-left: 6px;
+    }
+    &__formulesOption {
+        text-align: right;
+        color: white;
+        font-size: 20px;
+        margin-right: 75px;
+    }
+    &__choix {
+        display: flex;
+        justify-content: right;
+        gap: 15px;
+        margin-right: 75px;
+    }
+    &__choixDif {
+        color: white;
+        font-size: 20px;
+    }
+    &__formules {
+        margin-bottom: 18px;
+    }
+    &__buttonForm {
+        width: 100%;
+        background-color: #01A247;
+        color: white;
+        border: none;
+        font-size: 25px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-weight: 600;
+    }
+    &__buttonForm:hover {
+        cursor: pointer;
+        box-shadow:  4px 4px 6px 0 rgba(51, 50, 50, 0.5);
+        background-color: #15c05f;
+    }
+
+    /*avis googgle*/
+    &__google {
+        margin-top: 80px;
+    }
+    &__contact {
+        margin-top: 80px;
+        text-align: center;
+        margin: 0 auto;
+        background-color: #f7f7f7;
+        padding-top: 30px;
+        padding-bottom: 10px;
+    }
+
+    /*contact*/
+    &__contact-imgTel, &__contact-imgEmail, &__contact-imgAdresse {
+        width: 30px;
+        height: 30px;
+    }
+    &__contac-tbloc2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+    }
+    &__contact-text {
+        font-size: 25px;
+        font-weight: 500;
+    }
+
+}
+
+//formules//
+.formuleUn {
+    background-color: #4c4c4c;
+    
+}
+.formuleDeux {
+    background-color: #01A247;
+}
+
+.formuleTrois {
+    background-color: #AC9D97;
+}
+
+.formuleQuatre {
+    background-color: #2d8151dc;
+}
+
+fieldset {
+    border: none;
+}
+.home__demenagement-bloc, .home__montebloc-img, .home__gardebloc-img, .home__demenagement-img {
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+    justify-content: center; 
+    margin-top: 20px; 
+    gap: 50px;
+}
+
+
+/* Media queries */
+@media only screen and (max-width: 768px) {
+
+    .home__tarif-troisbloc {
+      flex-direction: column;
+    }
+}
+
+@media only screen and (min-width: 280px) and (max-width: 460px) {
+
+    .home__banner-phone {
+        font-size: 9px;
+        margin-left: 0;
+        padding-left: 3px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        padding-right: 3px;
+    }
+
+    .home__textBanner {
+        margin-top: 5px;
+    }
+
+    .home__banner-h1 {
+        font-size: 12px;
+
+    }
+
+    .home__banner-h2 {
+        font-size: 11px;
+        font-weight: 500;
+    }
+
+    .home__banner-blocLink {
+        margin-top: 0;
+    }
+    .home__banner-linkT, .home__banner-linkE {
+      font-size: 10px;
+      padding: 3px;
+    }
+    .home__banner-linkT {
+        width: 26px;
+    }
+    .home__banner-linkE {
+        width: 85px;
+    }
+    .home__blocDescription {
+        margin-top: 40px;
+    }
+    .home__blocDescription {
+        margin-top: 40px;
+    }
+    .home__description {
+      font-size: 12px;
+      width: 300px;
+      margin: 0 auto;
+      text-align: center;
+      justify-content: center;
+      margin-bottom: 10px;
+      margin-top: 10px;
+    }
+    .home__h3 {
+        font-size: 18px;
+       
+    }
+    .home__demenagement, .home__monte, .home__garde {
+        margin-bottom: 20px;
+    }
+    .home__demenagement-bloc {
+        margin-top: 30px;
+        display: block;
+        width: 90%;
+        
+    }
+    .home__demenagement-img, .home__monte-img, .home__garde-img {
+        margin-top: 0;
+        width: 250px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .home__tarif-text, .home__tarif-li1 {
+        font-size: 12px;
+    }
+    .home__tarif-list1 {
+      margin-left: 0;
+      font-size: 12px;
+    }
+    .home__tarif-troisbloc {
+        display: block;
+    }
+    .home__tarif-li, .home__tarif-prix {
+      font-size: 12px;
+    }
+    .home__tarif-titre {
+      font-size: 15px;
+    }
+    .home__tarif-bloc {
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .home__estimation-h4 {
+      font-size: 10px;
+    }
+    .home__form-titre {
+      font-size: 11px;
+      margin-left: 0;
+    }
+    .home__form-input, .home__textarea {
+      width: 90%;
+      font-size: 11px;
+    }
+    .home__form-inputUn {
+      width: 90%;
+      font-size: 11px;
+    }
+    .home__choix {
+        gap: 10px;
+        
+    }
+    .home__choixDif {
+      font-size: 9px;
+      align-items: center;
+    }
+    .home__buttonForm {
+      font-size: 13px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+    .home__formulesOption {
+        font-size: 12px;
+        text-align: left;
+        margin-right: 10px;
+    }
+    .home__contact-text {
+      font-size: 12px;
+    }
+    .home__contact-imgTel, .home__contact-imgEmail, .home__contact-imgAdresse {
+        width: 20px;
+        height: 20px;
+    }
+
+
+}
+
+@media only screen and (min-width: 461px)  and (max-width: 580px) {
+    
+    .home__textBanner {
+        margin-top: 5px;
+    }
+    .home__banner-phone {
+        font-size: 10px;
+        margin-left: 0;
+        padding-left: 3px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        padding-right: 3px;
+    }
+    .home__banner-h1 {
+      font-size: 15px;
+      font-weight: 400;
+    }
+    .home__banner-h2 {
+      font-size: 14px;
+      font-weight: 200;
+    }
+    .home__banner-blocLink {
+        margin-top: 0;
+    }
+    .home__banner-linkT, .home__banner-linkE {
+      font-size: 14px;
+      padding: 5px;
+    }
+    .home__banner-linkT {
+        width: 35px;
+    }
+    .home__banner-linkE {
+        width: 117px;
+    }
+    .home__blocDescription {
+        margin-top: 40px;
+    }
+    .home__description {
+      font-size: 12px;
+      width: 300px;
+      margin: 0 auto;
+      text-align: center;
+      justify-content: center;
+      margin-bottom: 10px;
+      margin-top: 10px;
+    }
+    .home__h3 {
+        font-size: 18px;
+       
+    }
+    .home__demenagement, .home__monte, .home__garde {
+        margin-bottom: 20px;
+    }
+    .home__demenagement-bloc {
+        margin-top: 30px;
+        display: block;
+        width: 90%;
+        
+    }
+    .home__demenagement-img, .home__monte-img, .home__garde-img {
+        margin-top: 0;
+        width: 250px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .home__tarif-text, .home__tarif-li1 {
+        font-size: 12px;
+    }
+    .home__tarif-list1 {
+      margin-left: 0;
+      font-size: 12px;
+    }
+    .home__tarif-troisbloc {
+        display: block;
+    }
+    .home__tarif-li, .home__tarif-prix {
+      font-size: 12px;
+    }
+    .home__tarif-titre {
+      font-size: 15px;
+    }
+    .home__tarif-bloc {
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .home__estimation-h4 {
+      font-size: 12px;
+    }
+    .home__form-titre {
+      font-size: 13px;
+      margin-left: 0;
+    }
+    .home__form-input, .home__textarea {
+      width: 90%;
+      font-size: 13px;
+    }
+    .home__form-inputUn {
+      width: 90%;
+      font-size: 13px;
+    }
+    .home__choix {
+        gap: 10px;
+        
+    }
+    .home__choixDif {
+      font-size: 10px;
+      align-items: center;
+    }
+    .home__buttonForm {
+      font-size: 13px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+    .home__formulesOption {
+        font-size: 14px;
+        text-align: left;
+        margin-right: 10px;
+    }
+    .home__contact-text {
+      font-size: 14px;
+    }
+    .home__contact-imgTel, .home__contact-imgEmail, .home__contact-imgAdresse {
+        width: 20px;
+        height: 20px;
+    }
+}
