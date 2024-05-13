@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import Header from "../../layouts/Header/index";
 import Footer from '../../layouts/Footer';
 import Banner from '../../assets/banniere.png';
@@ -8,31 +8,13 @@ import Garde from '../../assets/gardemeuble.png';
 import Tel from '../../assets/telephone.png';
 import Localisation from '../../assets/localisateur.png';
 import Email from '../../assets/email.png';
-// import emailjs from '@emailjs/browser';
 import { ElfsightWidget } from 'react-elfsight-widget';
 
 
 
 function Accueil () {
 
-//     const form = useRef();
 
-//   const sendEmail = (e) => {
-//     e.preventDefault();
-
-//     emailjs
-//       .sendForm('service_3l6pg5i', 'template_nejy1zj', form.current, {
-//         publicKey: 'QOQVR5eY_l723sW1L',
-//       })
-//       .then(
-//         () => {
-//           console.log('SUCCESS!');
-//         },
-//         (error) => {
-//           console.log('FAILED...', error.text);
-//         },
-//       );
-//   };
 
     return (
         <div>
@@ -48,7 +30,7 @@ function Accueil () {
                         </div>
                         
                         <div className='home__textBanner'>
-                            <div className='home__banner-phone-container'><span className='home__banner-phone'>Tel : 07 61 87 27 02 | 06 30 72 22 88</span></div>
+                            <div className='home__banner-phone-container'><span className='home__banner-phone'>Tel : 01 88 61 58 63</span></div>
                             <div className='home__banner-h1-container'><h1 className='home__banner-h1'>SOFT TRANSPORTS</h1></div>
                             <div className='home__banner-h2-container'><h2 className='home__banner-h2'>Déménagement de particuliers et de professionels, <br />
                             location de monte-meuble et de garde-meuble</h2></div>
@@ -393,7 +375,7 @@ function Accueil () {
 
                             <div className='home__contac-tbloc2'>
                                 <img className="home__contact-imgTel" src={Tel} alt="icone tel" />
-                                <p className='home__contact-text'>Tel : 07 61 87 27 02 / 06 30 72 22 88</p>
+                                <p className='home__contact-text'>Tel : 01 88 61 58 63 / 06 30 72 22 88</p>
                             </div>
 
                             <div className='home__contac-tbloc2'>
