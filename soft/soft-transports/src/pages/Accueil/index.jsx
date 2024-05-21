@@ -30,9 +30,9 @@ function Accueil () {
                         </div>
                         
                         <div className='home__textBanner'>
-                            <div className='home__banner-phone-container'><span className='home__banner-phone'>Tel : 01 88 61 58 63</span></div>
+                            {/* <div className='home__banner-phone-container'><span className='home__banner-phone'>Tel : 01 82 83 25 70</span></div> */}
                             <div className='home__banner-h1-container'><h1 className='home__banner-h1'>SOFT TRANSPORTS</h1></div>
-                            <div className='home__banner-h2-container'><h2 className='home__banner-h2'>Déménagement de particuliers et de professionels, <br />
+                            <div className='home__banner-h2-container'><h2 className='home__banner-h2'>Déménagement de particuliers et de professionels,
                             location de monte-meuble et de garde-meuble</h2></div>
                             
                             <div className='home__banner-blocLink'>
@@ -375,7 +375,7 @@ function Accueil () {
 
                             <div className='home__contac-tbloc2'>
                                 <img className="home__contact-imgTel" src={Tel} alt="icone tel" />
-                                <p className='home__contact-text'>Tel : 01 88 61 58 63 / 06 30 72 22 88</p>
+                                <p className='home__contact-text'>Tel : 01 82 83 25 70 / 06 30 72 22 88</p>
                             </div>
 
                             <div className='home__contac-tbloc2'>

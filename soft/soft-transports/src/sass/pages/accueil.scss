@@ -5,7 +5,7 @@
         width: 100%;
         height: auto;
         object-fit: cover;
-        // opacity: 95%;    
+           
     }
     &__blocBanner {
         position: relative;
@@ -26,7 +26,7 @@
         height: auto;
     }    
     &__banner-phone {            
-        color: white;        
+        color: #01A247;        
         border: 2px solid #01A247;
         padding-left: 10px;
         padding-top: 10px;
@@ -35,7 +35,7 @@
         font-weight: 600;
         text-align: center;
         font-size: 23px;
-        margin-left: 200px;
+        margin-left: 50px;
     }
     &__banner-phone:hover {
         background-color: #FFCB12;
@@ -95,11 +95,16 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-top: 130px;
+        margin-top: 90px;
         margin-bottom: 50px;
         background-color: #f7f7f7;
     }
 
+    /*avis googgle*/
+    &__google {
+        margin-top: 80px;
+    }
+    
     /*informations*/
     &__demenagement, &__monte, &__garde {
         display: flex;
@@ -259,10 +264,7 @@
         background-color: #15c05f;
     }
 
-    /*avis googgle*/
-    &__google {
-        margin-top: 80px;
-    }
+    
     &__contact {
         margin-top: 80px;
         text-align: center;
@@ -331,8 +333,8 @@ fieldset {
 @media only screen and (min-width: 280px) and (max-width: 460px) {
 
     .home__banner-phone {
-        font-size: 9px;
-        margin-left: 0;
+        font-size: 10px;
+        margin-left: 20px;
         padding-left: 3px;
         padding-top: 3px;
         padding-bottom: 3px;
@@ -344,13 +346,20 @@ fieldset {
     }
 
     .home__banner-h1 {
-        font-size: 12px;
+        font-size: 13px;
 
     }
 
     .home__banner-h2 {
-        font-size: 11px;
+        font-size: 12px;
         font-weight: 500;
+    }
+
+    .home__google {
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 10px;
+        
     }
 
     .home__banner-blocLink {
@@ -359,6 +368,7 @@ fieldset {
     .home__banner-linkT, .home__banner-linkE {
       font-size: 10px;
       padding: 3px;
+      font-weight: 500;
     }
     .home__banner-linkT {
         width: 26px;
@@ -366,12 +376,12 @@ fieldset {
     .home__banner-linkE {
         width: 85px;
     }
+    
     .home__blocDescription {
-        margin-top: 40px;
+        margin-top: 30px;
+        margin-bottom: 0;
     }
-    .home__blocDescription {
-        margin-top: 40px;
-    }
+
     .home__description {
       font-size: 12px;
       width: 300px;
@@ -400,8 +410,11 @@ fieldset {
         margin-right: auto;
         margin-left: auto;
     }
+    .home__tarif {
+        margin-top: 45px;
+    }
     .home__tarif-text, .home__tarif-li1 {
-        font-size: 12px;
+        font-size: 13px;
     }
     .home__tarif-list1 {
       margin-left: 0;
@@ -411,13 +424,13 @@ fieldset {
         display: block;
     }
     .home__tarif-li, .home__tarif-prix {
-      font-size: 12px;
+      font-size: 13px;
     }
     .home__tarif-titre {
-      font-size: 15px;
+      font-size: 16px;
     }
     .home__tarif-bloc {
-        width: 50%;
+        width: 80%;
         margin-left: auto;
         margin-right: auto;
     }

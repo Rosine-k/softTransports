@@ -29,7 +29,9 @@ function Header() {
             <Link to="/" className="navigation__logo"><img className="navigation__logoImg" src={Logo} alt="logo" /></Link>
           </div>
 
-          <div className="navigation__blocb">
+          <div className='home__banner-phone-container'><span className='home__banner-phone'>Tel : 01 82 83 25 70</span></div>
+
+          {/* <div className="navigation__blocb">
 
             <a href="#demenagement" className= "navigation__link">DÉMÉNAGEMENT</a>
             <a href="#monte" className="navigation__link">MONTE-MEUBLE</a>
@@ -38,7 +40,7 @@ function Header() {
             <a href="#estimation" className="navigation__link">ESTIMATION</a>
             <a href="#contact" className="navigation__link">CONTACT</a>
 
-          </div>          
+          </div>           */}
 
         </nav>
 
