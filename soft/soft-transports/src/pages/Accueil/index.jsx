@@ -30,7 +30,7 @@ function Accueil () {
                         </div>
                         
                         <div className='home__textBanner'>
-                            {/* <div className='home__banner-phone-container'><span className='home__banner-phone'>Tel : 01 82 83 25 70</span></div> */}
+    
                             <div className='home__banner-h1-container'><h1 className='home__banner-h1'>SOFT TRANSPORTS</h1></div>
                             <div className='home__banner-h2-container'><h2 className='home__banner-h2'>Déménagement de particuliers et de professionels,
                             location de monte-meuble et de garde-meuble</h2></div>

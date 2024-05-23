@@ -1,0 +1,19 @@
+.erreur {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 180px;
+   
+    &__link {
+        color: blue;
+        cursor: pointer;
+    }
+    &__link:hover {
+        color: #0ab353;
+    }
+    &__h1 {
+        margin-bottom: 40px;
+    }
+}
