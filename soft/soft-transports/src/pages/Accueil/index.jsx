@@ -9,12 +9,12 @@ import Tel from '../../assets/telephone.png';
 import Localisation from '../../assets/localisateur.png';
 import Email from '../../assets/email.png';
 import { ElfsightWidget } from 'react-elfsight-widget';
-
+import Formulaire from '../../components/Formulaire/index';
 
 
 function Accueil () {
 
-
+   
 
     return (
         <div>
@@ -59,7 +59,6 @@ function Accueil () {
 
                             <div className='home__demenagement-bloc'>
                                 <p className='home__description'>Pour les particuliers, le déménagement représente toujours un événement significatif. Soft Transports propose une expérience de déménagement sur mesure, conçue pour  répondre à chaque besoin spécifique de ses clients à Paris et en Île-de-France.
-
                                     <br /> <br />Optez pour la facilité lors de votre déménagement en faisant appel à des professionnels  dotés de plusieurs années d'expérience dans la manutention et le transport. Nous acheminons tous types de  mobiliers  et équipements à travers toute la France.
 
                                     <br /><br /> Avec Soft Transports, déménagez en toute sérénité et dans un esprit soft.
@@ -70,7 +69,6 @@ function Accueil () {
                                 </div>
                             </div>
                         
-
                         </div>
 
                         {/*MONTE CHARGE*/} 
@@ -207,164 +205,8 @@ function Accueil () {
                         </div>
                     </div>  
 
-                    {/*ESTIMATION*/} 
-                    <div className='home__estimation' id='estimation'>
-                        <h3 className='home__h3'>Estimation</h3>
-
-                        <div className='home__estimation-formulaire'>
-                            <h4 className='home__estimation-h4'>REMPLISSEZ CE FORMULAIRE ET VOUS RECEVREZ UN DEVIS SOUS 24H</h4>
-                            {/*FORMULAIRE*/}
-                            <form id="form" >
-
-                                <fieldset>
-                                    <legend className='home__form-titre'>Informations de contact</legend>
-                                    
-                                    <div className='home__form-blocUn'>
-                                        {/*NOM*/}
-                                        <div>
-                                            <label for="nom"></label>
-                                            <input className='home__form-input' type="text" id="nom" name="nom" placeholder='Nom* 'required></input>
-                                            <p id="nomError" class="home__error"></p>
-                                        </div>
-                                        {/*PRENOM*/}
-                                        <div>
-                                            <label for="prenom"></label>
-                                            <input className='home__form-input' type="text" id="prenom" name="prenom" placeholder='Prénom*' required></input>
-                                            <p id="prenomError" class="home__error"></p>
-                                        </div>
-                                    </div>
-
-                                    <div className='home__form-blocUn'>
-                                        {/*TELEPHONE*/}
-                                        <div>
-                                            <label for="telephone"></label>
-                                            <input className='home__form-input' type="tel" id="telephone" name="telephone" placeholder='Téléphone*' required></input>
-                                            <p id="telephoneError" class="home__error"></p>
-                                        </div>
-                                        {/*EMAIL*/}
-                                        <div>
-                                            <label for="email"></label>
-                                            <input className='home__form-input' type="email" id="email" name="email" placeholder='Email*' required></input>
-                                            <p id="emailError" class="home__error"></p>
-                                        </div>
-                                    </div>
-
-                                    
-                                </fieldset>
-
-                                <fieldset>
-                                    <legend className='home__form-titre'>Votre déménagement</legend>
-                                    {/*DATE*/}                                    
-                                    <div>
-                                        <label for="date_dem"></label>
-                                        <input className='home__form-inputUn' type="date" id="date_dem" name="date_dem" placeholder='Date de déménagement*' required></input>
-                                        <p id="dateError" class="home__error"></p>
-                                    </div>
-
-                                    <div className='home__form-blocUn'>
-                                        {/*VILLE DEPART*/}
-                                        <div>
-                                            <label for="ville_dep"></label>
-                                            <input className='home__form-input' type="text" id="ville_dep" name="ville_dep" placeholder='Ville de départ*' required></input>
-                                            <p id="villeDepError" class="home__error"></p>
-                                        </div>
-                                        {/*VILLE ARRIVEE*/}
-                                        <div>
-                                            <label for="ville_arr"></label>
-                                            <input className='home__form-input' type="text" id="ville_arr" name="ville_arr" placeholder="Ville d'arrivée*" required></input>
-                                            <p id="villeArrError" class="home__error"></p>
-                                        </div>
-
-                                    </div>
-
-                                    <div className='home__form-blocUn'>
-                                        {/*ADRESSE*/}
-                                        <div>
-                                            <label for="adresse"></label>
-                                            <input className='home__form-input' type="text" id="adresse" name="adresse" placeholder='Adresse*' required></input>
-                                            <p id="adresseError" class="home__error"></p>
-                                        </div>
-                                        {/*VOLUME*/}
-                                        <div>
-                                            <label for="volume"></label>
-                                            <input className='home__form-input' type="number" id="volume" name="volume"  placeholder='Volume en m²*' required></input>
-                                            <p id="volumeError" class="home__error"></p>
-                                        </div>
-                                    </div>
-                                    
-                                    {/*REMARQUES*/}
-                                    <div>
-                                        <label for="remarques"></label>
-                                        <textarea className='home__textarea' id="remarques" name="remarques" placeholder='Remarques' rows="4"></textarea>
-                                    </div>
-
-                                </fieldset>
-
-                                {/*FORMULES*/}
-                                <fieldset className='home__formules'>
-                                    <legend className='home__formulesOption'>Formule souhaitée :</legend>
-
-                                    <div className='home__choix'>
-                                        <div>
-                                            <label className='home__choixDif'>
-                                                <input  type="checkbox" name="formule_econommique" id='formule_econommique' value="economique"></input>
-                                                Économique
-                                            </label>
-                                        </div>
-                                        <div>
-                                            <label className='home__choixDif'>
-                                                <input  type="checkbox" name="formule_econommique_plus" id='formule_econommique_plus' value="economique+"></input>
-                                                Économique +
-                                            </label>
-                                        </div>
-                                        <div>
-                                            <label className='home__choixDif'>
-                                                <input  type="checkbox" name="formule_standard" id='formule_standard' value="standard"></input>
-                                                Standard
-                                            </label>
-                                        </div>
-                                        <div>
-                                            <label className='home__choixDif'>
-                                                <input  type="checkbox" name="formule_luxe" id='formule_luxe' value="luxe"></input>
-                                                Luxe
-                                            </label>
-                                        </div>
-                                    </div>
-                                    
-                                </fieldset>
-
-                                {/*OPTIONS*/}
-                                <fieldset className='home__formules'>
-                                    <legend className='home__formulesOption'>Options :</legend>
-
-                                    <div className='home__choix'>
-                                        <div>
-                                            <label className='home__choixDif'>
-                                                <input  type="checkbox" name="option_monte_meuble" id="option_monte_meuble" value="monte_meuble"></input>
-                                                Monte-meuble
-                                            </label>
-                                        </div>
-                                        <div>
-                                            <label className='home__choixDif'>
-                                                <input  type="checkbox" name="option_garde_meuble" id="option_garde_meuble" value="garde_meuble"></input>
-                                                Garde-meuble
-                                            </label>
-                                        </div>
-                                    </div>
-                                    
-                                </fieldset>
-
-                                {/*BOUTON*/}
-                                <div>
-                                    <button type='submit' className='home__buttonForm'>OBTENIR UN DEVIS</button>
-                                </div>
-                            </form>
-                            
-                            
-                        </div>
-
-                    </div>
-
+                    
+                    <Formulaire />
                     
 
                     {/*CONTACT*/} 
